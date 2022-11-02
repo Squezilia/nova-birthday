@@ -1,0 +1,23 @@
+{
+  "name": "mehmet-emir-bozat",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "vite --open",
+    "build": "vite build --out dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.2.0",
+    "sass": "^1.55.0",
+    "vite": "^3.2.2"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.187",
+    "lodash": "^4.17.21"
+  }
+}
