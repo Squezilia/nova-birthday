@@ -1,6 +1,9 @@
 <template>
     <Loader v-model="isPageLoaded" />
     <main class="page" :style="`--bg: ${background}; --c: ${color}; --fW: ${fontWeight}; --fF: ${fontFamily};`">
+        <div class="source" @click="goSource()">
+            View Source Code
+        </div>
         <JumpText :loaded="false" :delay="frameData.delay" :text="frameData.text" :id="`frame-${frame}`" v-for="(frameData, frame) in animation" />
     </main>
 </template>
@@ -78,7 +81,7 @@ export default defineComponent({
                     setTimeout(() => {
                         alert("Ḓ̸̓̂̐̌͜͝o̶̺̻̲̙̟͇̒͐ğ̸͚̗̹̗͓̍̏̆ū̷̼̩̉͝m̵̤̿̓̿͗͐͠ ̵͉̟̩̹̅͌̾͒͆̚g̴̨̨̭͇̘͆̃͌ṳ̸̦̜̟͇͇̈̀̚ͅn̴̟̱̠͊̍̃̒̉ü̸͉͓̭͈͉̍͂̍͋͂̉ͅn̶̦̱͎̭̳͙̆̄͗ ̷̡͈̲̻͓͓́͠ͅk̸̜͚̐͆̔͗u̵̘͍͔͖̰̣͛͘t̸̼̘͇͔͋̓̿̆̀̑l̸̰͔̼̘͇̓̄̒̌̽͝ư̶̢̧̡̳̻͕̫̏ ̸̡͐̈̚ȏ̶̳͔͆͝l̷̯̬͕̾̃͠ͅs̴̝͔̳̊͐͜ű̶̧̦̫͎͓̑ǹ̵̡̲̞͒ ̴̤͌Ḿ̴̛͉̥̣̮̜͓̋̾͝͝e̴̡̟̘͉̭̗̩̅͋̃̿̂ḫ̵̳̲͉͙̏̀̇͛m̷͎̱̠̗̞̮̯̀e̵̪̣̚t̸̟͙̋̓͘ ̶̛̭͚̄E̵͖̿͛̄̿͝m̴̨̛̾̐͐́͛̀ĭ̴̟̳̙̍̽͑̽r̷̖̻͛̄͊ ̴̡̲͔̞̜̱̖̈̈́̓̏̍̌̚B̴̳͈͓͓̥͊̌͊ȯ̷̗̯͔͎̽͒͋z̵̨̓̏à̶͓̭͔̱̼ͅt̶͕̳̟̘̲̽ͅ!̴̖̦͙̰͈͈͊̎");
                         alert("Ḧ̶̛͉̝̝̹̯̪̈́̓̾́̿́͑̇͂̀̒͜͝e̷̢͍̔̓͛̓̾͑́̏̌̈́͘͝r̸͓͓̗̣͖̦̪̫̃́̑̂̋̽̃͆̂͒͛͘ ̶̡̠̝̣̹̥̹͙̣͙̓́̋̂͗̕͝͝͝ş̷̥̖̟̣̝̭͇͖̣͕͓͒̎̉̅͐̎͜͠ȩ̵̨̖̲̥̗̼̥͍̎͂̀̒̚y̷̧̨̜̝͖̜͉̥͙̻̤͔̋̋͌̌͊͂͜ ̴̢̛̹͉͚̲̮̝̭̙͍͊͂͑̽͒̊̍̚͜i̸̡̢̯̩̟͚̲͖͗͜͜ç̴̧̘̙̫͖̠̣̤̥͙͝ỉ̸̛̳̝̬͚̖̩̱̪̤̥͉̊̍̆̐̉̑̓̐͝n̴͖͈̮̯̙̺͖̖̠̪̳̒̏̽̌̓̋͂̐̅̕ͅ ̷̥̜̃̾͒͂̇͂͗ţ̴̠̲̲͇̰̗̹̬̥͈̣̀̽̐̃̓e̵̡͊̀͒͑̄ş̵̨̢͉̻̜̤̥̤͆͛̈́̎͒̎̕͜ę̵̡̛̺̘̼̌͊̈́k̴̨̧̯͐̏̔́̓̃̅̔̈̈͑̂́̕͠k̴̢̛͍̰̞̒̐́̔̽̈̍̓́̒̚ü̵̪̩͎̥̯͗̓̚r̵̨̪̻͎͔̻͖̘͖͊̓̍̄̍́͂̕͠l̴̮̦̲͓͌̉ȩ̷̢̺̜̙͓͙̗̦͖̪́͗̃́́͊̀̀̅͆̏͐̐̇͑ͅȑ̵̛͉͋̆̄̋̊̔͋̎̈́̔̉̚");
-                        /* localStorage.setItem('visited', "true"); */
+                        localStorage.setItem('visited', "true");
                     }, 3000)
                 } }
             ]
@@ -151,6 +154,9 @@ export default defineComponent({
                 }, duration);
                 duration += frameData.duration;
             })
+        },
+        goSource() {
+            window.location.href = 'https://github.com/xSquez/nova-birthday';
         }
     },
     watch: {

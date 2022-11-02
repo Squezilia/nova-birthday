@@ -24,3 +24,16 @@ main {
 h1 {
     margin: 0;
 }
+
+.source {
+    position: absolute;
+    bottom: 8%;
+    right: 6%;
+    padding: 0.6em 1em;
+    font-size: .2em;
+    background: #121212;
+    border: 1px solid #CECECE;
+    border-radius: 1em;
+    color: #fff;
+    font-weight: 900;
+}
