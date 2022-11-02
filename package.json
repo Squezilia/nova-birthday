@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "serve": "vite --open",
-    "build": "vite build --out dist"
+    "build": "vite build --out-dir dist"
   },
   "keywords": [],
   "author": "",
